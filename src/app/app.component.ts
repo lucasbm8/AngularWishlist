@@ -9,10 +9,6 @@ import { WishItem } from './shared/models/wishItem';
 })
 export class AppComponent {
   items : WishItem[] = [ //estou declarand items como um tipo de array de WishItem
-    new WishItem('Learn Angular'),
-    new WishItem('Get Coffee', true),
-    new WishItem('Find grass that cuts itself')
-
   ];
   title = 'wishlist';
   
