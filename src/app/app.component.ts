@@ -15,6 +15,16 @@ export class AppComponent {
 
   ];
   title = 'wishlist';
+  
+  newWishText='';
+
+
+  addNewWish(){
+    // add new wish to the items array and clear the textbox.
+    if(this.newWishText.length != 0){
+    this.items.push(new WishItem(this.newWishText));
+    this.newWishText = '';
+  }}
 
   toggleItem(item : WishItem) {
     item.isComplete = !item.isComplete;
