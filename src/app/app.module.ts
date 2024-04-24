@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { WishListComponent } from './wish-list/wish-list.component';
 
 //essa arquivo diz tudo que a aplicação precisa pra rodar. 
 
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({ //há um objeto que define as 
   declarations: [ //declarações. set de componentes ou directives que pertecem 
   //a esse modo particular. nesse casso é o appcomponente.
-    AppComponent
+    AppComponent, WishListComponent
   ],
   imports: [ //imports são disponíveis para os templares dentro desse modulo
     BrowserModule, 
