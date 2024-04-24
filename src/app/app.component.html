@@ -27,6 +27,16 @@
       There are no wishes to Display
     </div>
 
+    <div class="row mt-3">
+      <div class="col-sm-3">
+        <select title="Filter options" class="form-select">
+          <option value="0">All</option>
+          <option value="1">Completed</option>
+          <option value="2">Incomplete</option>
+        </select>
+      </div>
+    </div>
+
     <ng-template #showItems>
       <ul *ngIf="items.length > 0" class="wish-list">
         <li *ngFor="let item of items; index as ii">
