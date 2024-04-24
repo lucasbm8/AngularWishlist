@@ -1,3 +1,43 @@
 .wish-list{
     list-style: none;
 }
+/* Estilo para o formulário */
+.form-custom {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Estilo para o campo de entrada */
+  .form-custom .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para o botão */
+  .form-custom .btn-primary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo para o botão quando hover */
+  .form-custom .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para o rótulo */
+  .form-custom label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
