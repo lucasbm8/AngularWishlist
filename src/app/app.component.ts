@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { WishItem } from './shared/models/wishItem';
 
-const filters = [
+const filters = [ // arranjo filtros
+
   (item : WishItem) => item,
   (item : WishItem) => !item.isComplete,
   (item : WishItem) => item.isComplete
