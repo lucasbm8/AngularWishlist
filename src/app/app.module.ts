@@ -22,6 +22,7 @@ import { EventService } from './shared/services/EventService'; //importando o se
   imports: [ //imports são disponíveis para os templares dentro desse modulo
     BrowserModule, 
     FormsModule, //importando isso agora temos acesso ao ngModel
+    HttpClientModule, //importando isso agora temos acesso ao httpclient
   ],
   providers: [EventService],//providers são objetos que podem ser injetados a partes desse modulo
   bootstrap: [AppComponent]//bootstrap
