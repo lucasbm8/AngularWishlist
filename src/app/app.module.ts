@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { AddWishFormComponent } from './add-wish-form/add-wish-form.component';
 import { WishFilterComponent } from './wish-filter/wish-filter.component';
 import { WishListItemComponent } from './wish-list-item/wish-list-item.component';
+
+import { EventService } from './shared/services/EventService'; //importando o serviço de eventos
 
 //essa arquivo diz tudo que a aplicação precisa pra rodar. 
 
@@ -20,7 +22,7 @@ import { WishListItemComponent } from './wish-list-item/wish-list-item.component
     BrowserModule, 
     FormsModule, //importando isso agora temos acesso ao ngModel
   ],
-  providers: [],//providers são objetos que podem ser injetados a partes desse modulo
+  providers: [EventService],//providers são objetos que podem ser injetados a partes desse modulo
   bootstrap: [AppComponent]//bootstrap
 })
 export class AppModule { }
