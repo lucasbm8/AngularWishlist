@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WishItem } from './shared/models/wishItem';
-import { WishFilterComponent } from './wish-filter/wish-filter.component';
+
 import { EventService } from './shared/services/EventService';
 import { WishService } from './wish.service';
 @Component({
