@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { WishItem } from '../shared/models/wishItem';
 
 const filters = [ // arranjo filtros
@@ -14,19 +14,21 @@ const filters = [ // arranjo filtros
   styleUrls: ['./wish-filter.component.css']
 })
 export class WishFilterComponent implements OnInit {
+  @Input() filter: any;
 
-  @Output() filter = new EventEmitter<any>();
+  @Output() filterChange = new EventEmitter<any>(); //quando coloco Change no final da variável, o Angular entende que é estão linkados.
 
   constructor() { }
 
   ngOnInit(): void {
-    this.changeFilter(0);
+    this.updateFilter('0');
   }
 
   listFilter: any = '0';
 
-  changeFilter(value: any) {
-    this.filter.emit(filters[value]);
+  updateFilter(value: any) {
+    this.filter = filters[value];
+    this.filterChange.emit(this.filter);
   }
 
 }

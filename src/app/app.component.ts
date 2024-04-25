@@ -15,6 +15,6 @@ export class AppComponent {
 
   ];
 
-filter: any =() => {};
+filter: any;
 
 }
