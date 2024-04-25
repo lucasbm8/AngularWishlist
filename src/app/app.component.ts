@@ -18,7 +18,10 @@ export class AppComponent {
   constructor() {
     events.listen('removeWish', (wish: any) => {
        //aqui está declarado o que será feito, porém em eventService é onde de fato vou escrever o que eu quero que aconteça quando o usuário tentar remover.
-    })
+      let index = this.items.indexOf(wish);
+      this.items.splice(index, 1);
+    
+      })
   }
 
 filter: any;

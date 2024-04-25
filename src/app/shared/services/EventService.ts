@@ -8,12 +8,14 @@ class EventService{
     private subjct = new Subject(); //um evento é uma mensagem, 
 
     emit(eventName: string, payload: any){
+  
         this.subjct.next({eventName, payload}); //chamamos next que irá pegar o nome e o payload, quaisquer objeto que se inscreve num objeto evento terá um objeto de retorno com essas duas propriedades
 
     }
 
     listen(eventName: string, callback: (event: any) => void){
         this.subjct.asObservable().subscribe((nextObj: any)=>{
+        
             if(eventName === nextObj.eventName){
                 callback(nextObj.payload);
             }
