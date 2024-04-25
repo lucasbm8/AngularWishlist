@@ -11,10 +11,17 @@ import { WishItem } from '../shared/models/wishItem';
 export class WishListItemComponent implements OnInit {
 
   @Input() wishText!: string;// inicio wishtext indicando que é NÃONULLO por issoutilizo o ponto de exclamação, um truque para o compilador não reclamar. 
-
   @Input() fulfilled!: boolean;
   @Output() fulfilledChange = new EventEmitter<boolean>();
 
+get cssClasses(){
+  // return this.fulfilled? ['strikeout', 'text-muted']  : []; //se o fulfilled for true, ele vai retornar a classe strikeout, se não, ele vai retornar uma string vazia.
+
+
+  return {
+    'strikeout text-muted': this.fulfilled//posso retornar um objeto, onde a chave é o nome da classe e o valor é a condição que eu quero que seja verdadeira para que a classe seja aplicada.
+  };
+} 
 
   constructor() { }
 
