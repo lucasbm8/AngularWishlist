@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { AddWishFormComponent } from './add-wish-form/add-wish-form.component';
 import { WishFilterComponent } from './wish-filter/wish-filter.component';
+import { WishListItemComponent } from './wish-list-item/wish-list-item.component';
 
 //essa arquivo diz tudo que a aplicação precisa pra rodar. 
 
@@ -13,7 +14,7 @@ import { WishFilterComponent } from './wish-filter/wish-filter.component';
 @NgModule({ //há um objeto que define as 
   declarations: [ //declarações. set de componentes ou directives que pertecem 
   //a esse modo particular. nesse casso é o appcomponente.
-    AppComponent, WishListComponent, AddWishFormComponent, WishFilterComponent
+    AppComponent, WishListComponent, AddWishFormComponent, WishFilterComponent, WishListItemComponent
   ],
   imports: [ //imports são disponíveis para os templares dentro desse modulo
     BrowserModule, 

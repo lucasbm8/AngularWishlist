@@ -14,9 +14,5 @@ export class WishListComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  toggleItem(item : WishItem) {
-    item.isComplete = !item.isComplete;
-    console.log(item);
-  }
-
+  
 }
