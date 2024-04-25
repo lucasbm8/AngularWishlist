@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { WishItem } from '../shared/models/wishItem';
-
+import events from './../shared/services/EventService';
 
 
 @Component({
@@ -26,6 +26,12 @@ get cssClasses(){
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  removeWish() {
+    events.emit('removeWish',this.wishText);
+    console.log('Remove wish');
+    console.log('Removing wish', this.wishText);
   }
 
   //eu quero que toda vez que eu clique na checkbox ele mude o status, então vou pegar o fullfilled e mexer com ele. 

@@ -1,4 +1,4 @@
-<li>
+<li class="d-flex justify-content-between">
   <div class="form-check">
     <!-- tudo que eu colocar dentro das aspas deve ser uma string de javascript. e
     tb posso usar um operador ternário. -->
@@ -11,5 +11,13 @@
       />
       {{ wishText }}
     </label>
+  </div>
+  <div>
+    <button
+      type="button"
+      class="btn-close"
+      title="Close"
+      (click)="removeWish()"
+    ></button>
   </div>
 </li>
