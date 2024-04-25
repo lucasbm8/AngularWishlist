@@ -1,10 +1,13 @@
 //aqui é onde vai ser de fato implementada a lógica, o que vai ser feito quando o usuário clicar no botão de remover, ou quando ele clicar na checkbox.
 import { Injectable } from "@angular/core";
 import { Observable, Subject } from "rxjs"; //rxjs é uma biblioteca que permite trabalhar com programação reativa, ou seja, trabalhar com eventos, streams de dados, etc. http etc.
+import { AppModule } from "src/app/app.module";
 //subject é um tipo de observable que permite emitir valores, ou seja, ele é um tipo de observable que permite emitir valores, e também é um observer, ou seja, ele pode receber valores de outros observables.
 //observable é uma coleção de valores que podem ser emitidos ao longo do tempo.
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class EventService {
     private subjct = new Subject(); //um evento é uma mensagem, 
 
